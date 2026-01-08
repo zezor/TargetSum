@@ -14,7 +14,7 @@ uploaded_file = st.file_uploader("Upload Excel file", type=["xlsx"])
 target = st.number_input("Enter Target Amount", min_value=0.0, step=0.01)
 
 # Max items
-max_items = st.slider("Maximum number of transactions to combine", 3, 20, 5, help="Limit combination size for performance.")
+max_items = st.slider("Maximum number of transactions to combine", 3, 5, 20, help="Limit combination size for performance.")
 
 if uploaded_file and target > 0:
     df = pd.read_excel(uploaded_file)
