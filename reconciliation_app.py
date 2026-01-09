@@ -6,9 +6,13 @@ st.set_page_config(page_title="Transaction Reconciliation App", layout="centered
 
 st.title("💰 Transaction Reconciliation Tool")
 st.write("Upload an Excel file and find which transactions add up to a target amount.")
+## Sample Excel Format
+st.write("Excel Format - Two Columns with  |  ID | Amount|")
 
 # File upload
 uploaded_file = st.file_uploader("Upload Excel file", type=["xlsx"])
+
+
 
 # Target amount
 target = st.number_input("Enter Target Amount", min_value=0.0, step=0.01)
@@ -48,3 +52,8 @@ if uploaded_file and target > 0:
 
         if not found:
             st.warning("No matching combination found within the selected limits.")
+
+st.markdown("---")
+st.markdown("Developed by [Emmanuel N Nti](https://yourwebsite.com) | [github](https://github.com/zezor)")
+st.markdown("Feel free to reach out for any questions or suggestions! | [email](mailto:kemma2993@gmail.com)")
+st.markdown("© 2026 All rights reserved.")
